@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouer au Padel au TC Marly</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 24px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 24px 32px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-box {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            padding: 20px 24px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+
+        .header-title {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .header-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Main Grid Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 968px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards / Sections */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: -12px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            padding: 14px 24px;
+            border-radius: 10px;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive Iframes */
+        .iframe-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header (Abschnitt oben) -->
+        <header class="header-card">
+            <div class="logo-box">TC Marly</div>
+            <div>
+                <h1 class="header-title">Jouer au Padel au TC Marly</h1>
+                <p class="header-subtitle">Réservez votre court, créez votre compte ou connectez-vous facilement en quelques clics.</p>
+            </div>
+        </header>
+
+        <!-- Content Grid -->
+        <div class="grid-layout">
+            
+            <!-- Linke Kolonne: Abschnitt 1 -->
+            <section class="card">
+                <h2 class="section-title">Disponibilité du court Padel</h2>
+                <p class="section-desc">Consultez en temps réel les créneaux disponibles pour planifier vos parties.</p>
+                <div class="iframe-container">
+                    <iframe src="https://ballejaune.com/plannings-integrated?id=988&key=84c62fdcfb2bd4752e38e310cae1db78e8404857fdf1be95aa5331c3116d38ec3d36feeb9c35c249#date=0" style="width: 100%; height: 560px; border: 0;"></iframe>
+                </div>
+            </section>
+
+            <!-- Rechte Kolonne -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                
+                <!-- Abschnitt 2 -->
+                <section class="card">
+                    <h2 class="section-title" style="font-size: 1.15rem; color: var(--text-color);">Vous n'êtes pas encore enregistré ? suivez le lien</h2>
+                    <p class="section-desc">Inscrivez-vous pour pouvoir réserver nos infrastructures de padel.</p>
+                    <a href="https://ballejaune.com/club/tc-marly/signup" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        Enregistrement pour non-membre Padel
+                    </a>
+                </section>
+
+                <!-- Abschnitt 3 -->
+                <section class="card">
+                    <h2 class="section-title" style="font-size: 1.15rem; color: var(--text-color);">Vous avez déjà un login ?</h2>
+                    <p class="section-desc">Formulaire de connexion</p>
+                    <div class="iframe-container">
+                        <iframe src="ballejaune.html" style="width: 100%; height: 340px; border: 0;"></iframe>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+```[cite: 1]
